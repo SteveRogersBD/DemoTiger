@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerpage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="66dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backbtn"
+            android:layout_width="387dp"
+            android:layout_height="59dp"
+            android:layout_below="@+id/registerbtn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="9dp"
+            android:background="@drawable/custom_button"
+            android:text="Go Back"
+            android:textSize="20sp"
+            android:theme="@style/Theme.AppCompat.Light"
+            app:backgroundTint="@color/green"
+            app:icon="@drawable/baseline_arrow_back_24"
+            app:iconSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="20dp"
+            android:hint="Username"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/baseline_abc_24"
+            android:drawablePadding="20dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerbtn"
+            android:layout_width="376dp"
+            android:layout_height="62dp"
+            android:layout_below="@+id/pass"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@color/teal"
+            android:onClick="registerclick"
+            android:text="Register"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/socialicons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
